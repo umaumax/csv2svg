@@ -1,5 +1,8 @@
 # csv2svg
 
+![version]( ./version.svg )
+![coverage]( ./coverage.svg )
+
 This command generates svg table from csv format.
 
 ## how to install
@@ -28,3 +31,9 @@ cat data/sample.csv | csv2svg
 
 ## FYI
 * [ajstarks/svgo: Go Language Library for SVG generation]( https://github.com/ajstarks/svgo )
+
+## FMI
+run below code before push
+```
+./pre_push_hook.sh
+```
