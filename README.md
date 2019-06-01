@@ -21,13 +21,12 @@ cat data/sample.csv | csv2svg
 
 ## TODO
 * Write test code!
-* stdin, file csv, markdown table format file
-* output stdout or files
-* table title
-* header style only bold???  線を太くする??? style???
+* accept markdown table format file
+* output file flag
+* table title by flag or file name?
 
 ## NOTE
-* Don't surround words by `"` in csv files.
+* Don't surround words by `"` in csv files.? (maybe fixed by lazy option in code)
 
 ## FYI
 * [ajstarks/svgo: Go Language Library for SVG generation]( https://github.com/ajstarks/svgo )
