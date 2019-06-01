@@ -5,6 +5,12 @@
 
 This command generates svg table from csv format.
 
+The reason why I make this command is below.
+
+* The table may be cut by pdf format.
+* Many web sites don't accept html format as attach files.
+* Png format files don't include copyable texts.
+
 ## how to install
 ```
 go get -u github.com/umaumax/csv2svg/...
