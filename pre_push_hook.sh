@@ -3,7 +3,8 @@ app="csv2svg"
 version="v0.0.1"
 
 if ! type >/dev/null 2>&1 'trucolor'; then
-  npm install --global trucolor
+  echo 'FYI: [MarkGriffiths/trucolor: 24bit color tools for the command line]( https://github.com/MarkGriffiths/trucolor )'
+  echo "npm install --global trucolor"
   exit 1
 fi
 
