@@ -20,6 +20,7 @@ go get -u github.com/umaumax/csv2svg/...
 ```
 csv2svg data/sample.csv
 # output is data/sample.svg
+csv2svg -title="$(echo 'This is title.\nYou can use multi lines for title.⭐⭐⭐⭐⭐')" data/sample.csv
 
 cat data/sample.csv | csv2svg
 # output is /dev/stdout

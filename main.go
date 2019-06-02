@@ -13,10 +13,10 @@ import (
 	"github.com/ajstarks/svgo"
 )
 
-func GenarateTable(outputFile string, x int, y int, fontSize int, table [][]string, styles ...string) (canvas *svg.SVG, err error) {
+func GenarateTable(outputFile string, title string, x int, y int, fontSize int, table [][]string, styles ...string) (canvas *svg.SVG, err error) {
 	t := Table{
 		X: x, Y: y, FontSize: fontSize,
-		Title: "This is title!\nYou can use multi lines for title!!!!!⭐⭐⭐⭐⭐",
+		Title: title,
 	}
 	t.SetCells(table)
 
@@ -49,6 +49,7 @@ var (
 	// TODO: enable noHeaderFlag
 	noHeaderFlag bool
 	fontSizeFlag int
+	titleFlag    string
 	// TODO: add verbose flag
 )
 
@@ -56,6 +57,7 @@ func init() {
 	flag.BoolVar(&tsvFlag, "tsv", false, "use tsv or not")
 	flag.BoolVar(&noHeaderFlag, "no-header", false, "don't use header")
 	flag.IntVar(&fontSizeFlag, "font-size", 16, "font size (px)")
+	flag.StringVar(&titleFlag, "title", "", "title")
 }
 
 func main() {
@@ -112,7 +114,7 @@ func main() {
 		// TODO: enable x,y flag
 		x := 0
 		y := 0
-		canvas, err := GenarateTable(outputFile, x, y, fontSizeFlag, table, "fill:blue;stroke:black;storke-width:2;")
+		canvas, err := GenarateTable(outputFile, titleFlag, x, y, fontSizeFlag, table, "fill:blue;stroke:black;storke-width:2;")
 		if err != nil {
 			log.Fatal(err)
 		}
