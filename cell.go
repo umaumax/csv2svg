@@ -11,6 +11,9 @@ type Cell struct {
 }
 
 func (c *Cell) SetText(text string) (lineN int) {
+	if text == "" {
+		return
+	}
 	// NOTE: trim prefix and suffix space
 	c.texts = strings.Split(strings.TrimSpace(strings.Replace(text, "\r\n", "\n", -1)), "\n")
 	lineN = len(c.texts)
