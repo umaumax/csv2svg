@@ -24,6 +24,9 @@ csv2svg -title="$(echo 'This is title.\nYou can use multi lines for title.⭐⭐
 
 cat data/sample.csv | csv2svg
 # output is /dev/stdout
+
+# markdown to csv command example
+cat table.md | sed 's/^| *//g' | sed 's/|[^|]*$//g' | grep -v "\----" | sed 's/,/、/g' | sed 's/ *| */,/g'
 ```
 
 ## TODO
