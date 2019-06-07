@@ -176,7 +176,7 @@ func (t *Table) DrawTextAtMiddle(canvas *svg.SVG, x, y int, texts []string, styl
 func (t *Table) DrawTitleText(canvas *svg.SVG) {
 	textStyle := fmt.Sprintf("font-family:Monaco;font-size:%dpx;stroke:black;fill:black;text-anchor:middle;", t.FontSize)
 	c := t.TitleCell()
-	t.DrawTextAtMiddle(canvas, t.TitleRuneWidth()/2, 0, c.Texts(), textStyle)
+	t.DrawTextAtMiddle(canvas, t.ViewWidth()/2, 0, c.Texts(), textStyle)
 }
 
 func (t *Table) DrawTableText(canvas *svg.SVG) {
